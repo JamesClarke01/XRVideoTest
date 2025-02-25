@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://bnmbaqvk5r0ig"]
+
+[ext_resource type="Script" path="res://node_3d.gd" id="1_nsiy5"]
+[ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="2_bf61b"]
+[ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="3_yvutu"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="4_fyjg2"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="5_ybsnw"]
+[ext_resource type="PackedScene" uid="uid://ckyavy41l48wb" path="res://video_player.tscn" id="6_rm5lf"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_nsiy5")
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06141, 0)
+
+[node name="LeftHand" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+tracker = &"left_hand"
+
+[node name="LeftHand" parent="XROrigin3D/LeftHand" instance=ExtResource("2_bf61b")]
+
+[node name="RightHand" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.794026, 1.14848, 0)
+tracker = &"right_hand"
+
+[node name="RightHand" parent="XROrigin3D/RightHand" instance=ExtResource("3_yvutu")]
+
+[node name="FunctionPointer" parent="XROrigin3D" instance=ExtResource("4_fyjg2")]
+
+[node name="Screen" parent="." instance=ExtResource("5_ybsnw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.515906, -2.06332)
+screen_size = Vector2(4, 3)
+scene = ExtResource("6_rm5lf")
+viewport_size = Vector2(1280, 720)
+scene_properties_keys = PackedStringArray()
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23383, 0.992673)
