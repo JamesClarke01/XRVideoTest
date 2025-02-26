@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://ckyavy41l48wb"]
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_yl4ep"]
-file = "Bubbles.ogg"
+file = "Bubbles.ogv"
 
 [node name="VideoPlayer" type="Control"]
 layout_mode = 3
