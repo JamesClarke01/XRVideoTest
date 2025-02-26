@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bnmbaqvk5r0ig"]
 
-[ext_resource type="Script" path="res://node_3d.gd" id="1_nsiy5"]
+[ext_resource type="Script" uid="uid://cagy8d5k1gsm6" path="res://node_3d.gd" id="1_nsiy5"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="2_bf61b"]
 [ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="3_yvutu"]
 [ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="4_fyjg2"]
